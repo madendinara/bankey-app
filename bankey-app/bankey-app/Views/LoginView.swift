@@ -73,6 +73,7 @@ class LoginView: UIView {
         dividerView.snp.makeConstraints { make in
             make.height.equalTo(1)
         }
+
         
     }
 }
@@ -87,11 +88,7 @@ extension LoginView: UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text != "" {
-            return true
-        } else {
-            return false
-        }
+        return true
     }
     
     private func textFieldDidEndEditing(_ textField: UITextField) -> Bool {
