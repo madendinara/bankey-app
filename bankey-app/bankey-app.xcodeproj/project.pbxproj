@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		90B32C57712EAEFD5F74DEE1 /* Pods_bankey_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B139930E51693718959B43E /* Pods_bankey_app.framework */; };
 		9CA51A09296A976100B72BA9 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA51A08296A976100B72BA9 /* OnboardingContainerViewController.swift */; };
+		9CA51A0B296C452000B72BA9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA51A0A296C452000B72BA9 /* OnboardingViewController.swift */; };
+		9CA51A0D296C452D00B72BA9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA51A0C296C452D00B72BA9 /* OnboardingView.swift */; };
 		9CB897A4296894FE0069B800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB897A3296894FE0069B800 /* AppDelegate.swift */; };
 		9CB897A8296894FE0069B800 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB897A7296894FE0069B800 /* LoginViewController.swift */; };
 		9CB897AD296895000069B800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB897AC296895000069B800 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 		0B139930E51693718959B43E /* Pods_bankey_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bankey_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32933F8A26FDC6AEEBB48695 /* Pods-bankey-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bankey-app.release.xcconfig"; path = "Target Support Files/Pods-bankey-app/Pods-bankey-app.release.xcconfig"; sourceTree = "<group>"; };
 		9CA51A08296A976100B72BA9 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		9CA51A0A296C452000B72BA9 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		9CA51A0C296C452D00B72BA9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9CB897A0296894FE0069B800 /* bankey-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bankey-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB897A3296894FE0069B800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CB897A7296894FE0069B800 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				9CA51A08296A976100B72BA9 /* OnboardingContainerViewController.swift */,
+				9CA51A0A296C452000B72BA9 /* OnboardingViewController.swift */,
+				9CA51A0C296C452D00B72BA9 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -223,6 +229,8 @@
 			files = (
 				9CB897BA29693C9F0069B800 /* LoginView.swift in Sources */,
 				9CB897A8296894FE0069B800 /* LoginViewController.swift in Sources */,
+				9CA51A0B296C452000B72BA9 /* OnboardingViewController.swift in Sources */,
+				9CA51A0D296C452D00B72BA9 /* OnboardingView.swift in Sources */,
 				9CB897A4296894FE0069B800 /* AppDelegate.swift in Sources */,
 				9CA51A09296A976100B72BA9 /* OnboardingContainerViewController.swift in Sources */,
 			);
