@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90B32C57712EAEFD5F74DEE1 /* Pods_bankey_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B139930E51693718959B43E /* Pods_bankey_app.framework */; };
+		9CA51A09296A976100B72BA9 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA51A08296A976100B72BA9 /* OnboardingContainerViewController.swift */; };
 		9CB897A4296894FE0069B800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB897A3296894FE0069B800 /* AppDelegate.swift */; };
 		9CB897A8296894FE0069B800 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB897A7296894FE0069B800 /* LoginViewController.swift */; };
 		9CB897AD296895000069B800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB897AC296895000069B800 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		0B139930E51693718959B43E /* Pods_bankey_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bankey_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32933F8A26FDC6AEEBB48695 /* Pods-bankey-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bankey-app.release.xcconfig"; path = "Target Support Files/Pods-bankey-app/Pods-bankey-app.release.xcconfig"; sourceTree = "<group>"; };
+		9CA51A08296A976100B72BA9 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		9CB897A0296894FE0069B800 /* bankey-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bankey-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB897A3296894FE0069B800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CB897A7296894FE0069B800 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -54,8 +56,24 @@
 				C05AD6A71E63E4955594358F /* Pods-bankey-app.debug.xcconfig */,
 				32933F8A26FDC6AEEBB48695 /* Pods-bankey-app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9CA51A06296A972600B72BA9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9CB897B929693C9F0069B800 /* LoginView.swift */,
+				9CB897A7296894FE0069B800 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9CA51A07296A973000B72BA9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9CA51A08296A976100B72BA9 /* OnboardingContainerViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		9CB89797296894FE0069B800 = {
@@ -79,30 +97,14 @@
 		9CB897A2296894FE0069B800 /* bankey-app */ = {
 			isa = PBXGroup;
 			children = (
-				9CB897B729693A980069B800 /* Views */,
-				9CB897B829693A9F0069B800 /* ViewControllers */,
+				9CA51A07296A973000B72BA9 /* Onboarding */,
+				9CA51A06296A972600B72BA9 /* Login */,
 				9CB897A3296894FE0069B800 /* AppDelegate.swift */,
 				9CB897AC296895000069B800 /* Assets.xcassets */,
 				9CB897AE296895000069B800 /* LaunchScreen.storyboard */,
 				9CB897B1296895000069B800 /* Info.plist */,
 			);
 			path = "bankey-app";
-			sourceTree = "<group>";
-		};
-		9CB897B729693A980069B800 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9CB897B929693C9F0069B800 /* LoginView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9CB897B829693A9F0069B800 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				9CB897A7296894FE0069B800 /* LoginViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +224,7 @@
 				9CB897BA29693C9F0069B800 /* LoginView.swift in Sources */,
 				9CB897A8296894FE0069B800 /* LoginViewController.swift in Sources */,
 				9CB897A4296894FE0069B800 /* AppDelegate.swift in Sources */,
+				9CA51A09296A976100B72BA9 /* OnboardingContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
