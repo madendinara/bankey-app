@@ -22,12 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
         loginViewController.delegate = self
+        homeViewController.delegate = self
+        onboardingContainerViewController.delegate = self
         window?.rootViewController = loginViewController
         
         return true
     }
-
-
 
 }
 
@@ -47,15 +47,19 @@ extension AppDelegate {
 
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
-        onboardingContainerViewController.delegate = self
-        setViewController(onboardingContainerViewController)
+        if LocalState.hasOnboarded {
+            setViewController(homeViewController)
+        } else {
+            setViewController(onboardingContainerViewController)
+
+        }
     }
 }
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
-        homeViewController.delegate = self
         setViewController(homeViewController)
+        LocalState.hasOnboarded = true
     }
     
 }

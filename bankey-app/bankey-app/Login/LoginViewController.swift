@@ -63,6 +63,8 @@ class LoginViewController: UIViewController {
         super.viewDidDisappear(animated)
         
         sigInButton.configuration?.showsActivityIndicator = false
+        loginView.usernameTextField.text = ""
+        loginView.passwordTextField.text = ""
     }
     // MARK: - Methods
     
