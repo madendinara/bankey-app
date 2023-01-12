@@ -8,10 +8,19 @@
 import UIKit
 import SnapKit
 
+protocol LogoutDelegate: AnyObject {
+    func didSignOut()
+}
+
+protocol LoginViewControllerDelegate: AnyObject {
+    func didLogin()
+}
+
 class LoginViewController: UIViewController {
     
     
     // MARK: - Properties
+    weak var delegate: LoginViewControllerDelegate?
     
     var username: String? {
         return loginView.usernameTextField.text
@@ -50,6 +59,11 @@ class LoginViewController: UIViewController {
         configureView()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        sigInButton.configuration?.showsActivityIndicator = false
+    }
     // MARK: - Methods
     
     @objc func signInTapped() {
@@ -69,6 +83,7 @@ class LoginViewController: UIViewController {
         
         if username == "Dinara" && password == "Welcome" {
             sigInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
             errorLabel.isHidden = true
         } else {
             configureView(with: "Wrong username or password")

@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol OnboardingContainerViewControllerDelegate: AnyObject {
+    func didFinishOnboarding()
+}
+
 class OnboardingContainerViewController: UIViewController {
 
     // MARK: - Properties
+    weak var delegate: OnboardingContainerViewControllerDelegate?
     let pageViewController: UIPageViewController
     var pages = [UIViewController]()
     var currentVC: UIViewController {
@@ -88,7 +93,7 @@ class OnboardingContainerViewController: UIViewController {
     }
     
     @objc func closeTapped() {
-        
+        delegate?.didFinishOnboarding()
     }
 
 }
