@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var loginViewController = LoginViewController()
     var onboardingContainerViewController = OnboardingContainerViewController()
     var homeViewController = HomeViewController()
+    var mainViewController = MainViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -24,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginViewController.delegate = self
         homeViewController.delegate = self
         onboardingContainerViewController.delegate = self
-        window?.rootViewController = loginViewController
+        window?.rootViewController = mainViewController
+        
         
         return true
     }

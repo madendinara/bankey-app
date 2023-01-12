@@ -10,6 +10,8 @@
 		90B32C57712EAEFD5F74DEE1 /* Pods_bankey_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B139930E51693718959B43E /* Pods_bankey_app.framework */; };
 		9C3FDFA7296FCBD20051E11C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFA6296FCBD20051E11C /* HomeViewController.swift */; };
 		9C3FDFAA296FD6470051E11C /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFA9296FD6470051E11C /* LocalState.swift */; };
+		9C3FDFAC296FE2A20051E11C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFAB296FE2A20051E11C /* Extensions.swift */; };
+		9C3FDFAE296FE4250051E11C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFAD296FE4250051E11C /* MainViewController.swift */; };
 		9CA51A09296A976100B72BA9 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA51A08296A976100B72BA9 /* OnboardingContainerViewController.swift */; };
 		9CA51A0B296C452000B72BA9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA51A0A296C452000B72BA9 /* OnboardingViewController.swift */; };
 		9CA51A0D296C452D00B72BA9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA51A0C296C452D00B72BA9 /* OnboardingView.swift */; };
@@ -25,6 +27,8 @@
 		32933F8A26FDC6AEEBB48695 /* Pods-bankey-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bankey-app.release.xcconfig"; path = "Target Support Files/Pods-bankey-app/Pods-bankey-app.release.xcconfig"; sourceTree = "<group>"; };
 		9C3FDFA6296FCBD20051E11C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C3FDFA9296FD6470051E11C /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
+		9C3FDFAB296FE2A20051E11C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9C3FDFAD296FE4250051E11C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9CA51A08296A976100B72BA9 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		9CA51A0A296C452000B72BA9 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9CA51A0C296C452D00B72BA9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				9C3FDFA9296FD6470051E11C /* LocalState.swift */,
+				9C3FDFAB296FE2A20051E11C /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -123,14 +128,15 @@
 		9CB897A2296894FE0069B800 /* bankey-app */ = {
 			isa = PBXGroup;
 			children = (
-				9C3FDFA8296FD63D0051E11C /* Utils */,
-				9C3FDFA5296FCBC70051E11C /* Home */,
-				9CA51A07296A973000B72BA9 /* Onboarding */,
-				9CA51A06296A972600B72BA9 /* Login */,
 				9CB897A3296894FE0069B800 /* AppDelegate.swift */,
+				9CA51A06296A972600B72BA9 /* Login */,
+				9CA51A07296A973000B72BA9 /* Onboarding */,
+				9C3FDFA5296FCBC70051E11C /* Home */,
+				9C3FDFA8296FD63D0051E11C /* Utils */,
 				9CB897AC296895000069B800 /* Assets.xcassets */,
 				9CB897AE296895000069B800 /* LaunchScreen.storyboard */,
 				9CB897B1296895000069B800 /* Info.plist */,
+				9C3FDFAD296FE4250051E11C /* MainViewController.swift */,
 			);
 			path = "bankey-app";
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB897BA29693C9F0069B800 /* LoginView.swift in Sources */,
+				9C3FDFAC296FE2A20051E11C /* Extensions.swift in Sources */,
 				9CB897A8296894FE0069B800 /* LoginViewController.swift in Sources */,
 				9CA51A0B296C452000B72BA9 /* OnboardingViewController.swift in Sources */,
 				9CA51A0D296C452D00B72BA9 /* OnboardingView.swift in Sources */,
@@ -257,6 +264,7 @@
 				9C3FDFA7296FCBD20051E11C /* HomeViewController.swift in Sources */,
 				9CA51A09296A976100B72BA9 /* OnboardingContainerViewController.swift in Sources */,
 				9C3FDFAA296FD6470051E11C /* LocalState.swift in Sources */,
+				9C3FDFAE296FE4250051E11C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
