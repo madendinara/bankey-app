@@ -13,6 +13,7 @@
 		9C3FDFAC296FE2A20051E11C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFAB296FE2A20051E11C /* Extensions.swift */; };
 		9C3FDFAE296FE4250051E11C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFAD296FE4250051E11C /* MainViewController.swift */; };
 		9C3FDFB129726E100051E11C /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFB029726E100051E11C /* SummaryViewController.swift */; };
+		9C3FDFB3297272310051E11C /* SummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFB2297272310051E11C /* SummaryHeaderView.swift */; };
 		9CA51A09296A976100B72BA9 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA51A08296A976100B72BA9 /* OnboardingContainerViewController.swift */; };
 		9CA51A0B296C452000B72BA9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA51A0A296C452000B72BA9 /* OnboardingViewController.swift */; };
 		9CA51A0D296C452D00B72BA9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA51A0C296C452D00B72BA9 /* OnboardingView.swift */; };
@@ -31,6 +32,7 @@
 		9C3FDFAB296FE2A20051E11C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9C3FDFAD296FE4250051E11C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9C3FDFB029726E100051E11C /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		9C3FDFB2297272310051E11C /* SummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryHeaderView.swift; sourceTree = "<group>"; };
 		9CA51A08296A976100B72BA9 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		9CA51A0A296C452000B72BA9 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9CA51A0C296C452D00B72BA9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				9C3FDFB029726E100051E11C /* SummaryViewController.swift */,
+				9C3FDFB2297272310051E11C /* SummaryHeaderView.swift */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				9CA51A0D296C452D00B72BA9 /* OnboardingView.swift in Sources */,
 				9CB897A4296894FE0069B800 /* AppDelegate.swift in Sources */,
 				9C3FDFA7296FCBD20051E11C /* HomeViewController.swift in Sources */,
+				9C3FDFB3297272310051E11C /* SummaryHeaderView.swift in Sources */,
 				9CA51A09296A976100B72BA9 /* OnboardingContainerViewController.swift in Sources */,
 				9C3FDFAA296FD6470051E11C /* LocalState.swift in Sources */,
 				9C3FDFAE296FE4250051E11C /* MainViewController.swift in Sources */,

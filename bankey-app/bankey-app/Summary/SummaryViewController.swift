@@ -19,14 +19,14 @@ class SummaryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
+        configureTableView()
     }
 }
 
 extension SummaryViewController {
 
     
-    private func configure() {
+    private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -34,7 +34,7 @@ extension SummaryViewController {
         view.addSubview(tableView)
         makeConstraints()
     }
-    
+
     func makeConstraints() {
         tableView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
@@ -46,6 +46,19 @@ extension SummaryViewController {
 }
 
 extension SummaryViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = SummaryHeaderView()
+        return header
+    }
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 144
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 144
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = games[indexPath.row]
