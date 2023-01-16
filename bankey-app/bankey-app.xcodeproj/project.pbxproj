@@ -142,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				9CB897A3296894FE0069B800 /* AppDelegate.swift */,
+				9C3FDFAD296FE4250051E11C /* MainViewController.swift */,
 				9CA51A06296A972600B72BA9 /* Login */,
 				9CA51A07296A973000B72BA9 /* Onboarding */,
 				9C3FDFA5296FCBC70051E11C /* Home */,
@@ -150,7 +151,6 @@
 				9CB897AC296895000069B800 /* Assets.xcassets */,
 				9CB897AE296895000069B800 /* LaunchScreen.storyboard */,
 				9CB897B1296895000069B800 /* Info.plist */,
-				9C3FDFAD296FE4250051E11C /* MainViewController.swift */,
 			);
 			path = "bankey-app";
 			sourceTree = "<group>";
