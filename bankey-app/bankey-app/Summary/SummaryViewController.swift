@@ -8,19 +8,24 @@
 import UIKit
 
 class SummaryViewController: UIViewController {
-
+    
+    // MARK: - Properties
+    
+    var accounts: [SummaryCellViewModel] = []
     var tableView = UITableView()
+    
+    // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
+        configure()
     }
 }
 
 extension SummaryViewController {
-
     
-    private func configureTableView() {
+    
+    private func configure() {
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -32,8 +37,9 @@ extension SummaryViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         makeConstraints()
+        fetchData()
     }
-
+    
     func makeConstraints() {
         tableView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
@@ -41,6 +47,19 @@ extension SummaryViewController {
             make.trailing.equalTo(view.safeAreaLayoutGuide)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
+    }
+    
+    func fetchData() {
+        let savings = SummaryCellViewModel(accountType: .Banking,
+                                           accountName: "Basic Savings", balance: 5463365)
+        let visa = SummaryCellViewModel(accountType: .CreditCard,
+                                        accountName: "Visa Avion Card", balance: 346456)
+        let investment = SummaryCellViewModel(accountType: .Investment,
+                                              accountName: "Tax-Free Saver", balance: 6574657)
+        
+        accounts.append(savings)
+        accounts.append(visa)
+        accounts.append(investment)
     }
 }
 
@@ -50,7 +69,7 @@ extension SummaryViewController: UITableViewDataSource {
         let header = SummaryHeaderView()
         return header
     }
-
+    
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
         return 144
     }
@@ -60,12 +79,16 @@ extension SummaryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard !accounts.isEmpty else { return UITableViewCell() }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: SummaryCell.reuseId, for: indexPath) as! SummaryCell
+        let account = accounts[indexPath.row]
+        cell.configure(with: account)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return accounts.count
     }
 }
 

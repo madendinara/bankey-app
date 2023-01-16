@@ -67,6 +67,22 @@ class SummaryCell: UITableViewCell {
     }
     
     // MARK: - Methods
+    func configure(with viewModel: SummaryCellViewModel) {
+        nameLabel.text = viewModel.accountName
+        typeLabel.text = viewModel.accountType.rawValue
+        
+        switch viewModel.accountType {
+        case .Banking:
+            underLineView.backgroundColor = .systemTeal
+            typeLabel.text = "Banking"
+        case .CreditCard:
+            underLineView.backgroundColor = .systemBlue
+            typeLabel.text = "Credit Card"
+        case .Investment:
+            underLineView.backgroundColor = .systemOrange
+            typeLabel.text = "Investment"
+        }
+    }
     
     func configure() {
         [typeLabel, underLineView, nameLabel, balanceStackView, chevronImageView].forEach { contentView.addSubview($0) }
