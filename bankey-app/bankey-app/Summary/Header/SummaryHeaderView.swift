@@ -37,8 +37,7 @@ class SummaryHeaderView: UIView {
     }()
     lazy var headerImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "custom.sun.max")
-        imageView.tintColor = .systemYellow
+        imageView.image = UIImage(systemName: "sun.max")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()

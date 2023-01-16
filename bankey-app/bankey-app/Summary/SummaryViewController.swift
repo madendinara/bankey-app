@@ -8,13 +8,7 @@
 import UIKit
 
 class SummaryViewController: UIViewController {
-    
-    let games = [
-        "Pacman",
-        "Space Invaders",
-        "Space Patrol",
-    ]
-    
+
     var tableView = UITableView()
     
     override func viewDidLoad() {
@@ -29,6 +23,11 @@ extension SummaryViewController {
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.register(SummaryCell.self, forCellReuseIdentifier: SummaryCell.reuseId)
+        tableView.rowHeight = SummaryCell.rowHeight
+        tableView.tableFooterView = UIView()
+        
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
@@ -51,6 +50,7 @@ extension SummaryViewController: UITableViewDataSource {
         let header = SummaryHeaderView()
         return header
     }
+
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
         return 144
     }
@@ -60,13 +60,12 @@ extension SummaryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = games[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: SummaryCell.reuseId, for: indexPath) as! SummaryCell
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return games.count
+        return 1
     }
 }
 
