@@ -51,15 +51,30 @@ extension SummaryViewController {
     
     func fetchData() {
         let savings = SummaryCellViewModel(accountType: .Banking,
-                                           accountName: "Basic Savings", balance: 5463365)
+                                           accountName: "Basic Savings",
+                                           balance: 929466.23)
+        let chequing = SummaryCellViewModel(accountType: .Banking,
+                                            accountName: "No-Fee All-In Chequing",
+                                            balance: 17562.44)
         let visa = SummaryCellViewModel(accountType: .CreditCard,
-                                        accountName: "Visa Avion Card", balance: 346456)
-        let investment = SummaryCellViewModel(accountType: .Investment,
-                                              accountName: "Tax-Free Saver", balance: 6574657)
+                                        accountName: "Visa Avion Card",
+                                        balance: 412.83)
+        let masterCard = SummaryCellViewModel(accountType: .CreditCard,
+                                              accountName: "Student Mastercard",
+                                              balance: 50.83)
+        let investment1 = SummaryCellViewModel(accountType: .Investment,
+                                               accountName: "Tax-Free Saver",
+                                               balance: 2000.00)
+        let investment2 = SummaryCellViewModel(accountType: .Investment,
+                                               accountName: "Growth Fund",
+                                               balance: 15000.00)
         
         accounts.append(savings)
+        accounts.append(chequing)
         accounts.append(visa)
-        accounts.append(investment)
+        accounts.append(masterCard)
+        accounts.append(investment1)
+        accounts.append(investment2)
     }
 }
 

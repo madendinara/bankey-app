@@ -10,6 +10,8 @@
 		90B32C57712EAEFD5F74DEE1 /* Pods_bankey_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B139930E51693718959B43E /* Pods_bankey_app.framework */; };
 		9C25F00929750D6100B285E4 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25F00829750D6100B285E4 /* SummaryCell.swift */; };
 		9C25F00D2975235F00B285E4 /* SummaryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25F00C2975235F00B285E4 /* SummaryCellViewModel.swift */; };
+		9C25F00F29764B0300B285E4 /* DecimalUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25F00E29764B0300B285E4 /* DecimalUtil.swift */; };
+		9C25F01129764B6900B285E4 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25F01029764B6900B285E4 /* CurrencyFormatter.swift */; };
 		9C3FDFA7296FCBD20051E11C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFA6296FCBD20051E11C /* HomeViewController.swift */; };
 		9C3FDFAA296FD6470051E11C /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFA9296FD6470051E11C /* LocalState.swift */; };
 		9C3FDFAC296FE2A20051E11C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FDFAB296FE2A20051E11C /* Extensions.swift */; };
@@ -31,6 +33,8 @@
 		32933F8A26FDC6AEEBB48695 /* Pods-bankey-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bankey-app.release.xcconfig"; path = "Target Support Files/Pods-bankey-app/Pods-bankey-app.release.xcconfig"; sourceTree = "<group>"; };
 		9C25F00829750D6100B285E4 /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
 		9C25F00C2975235F00B285E4 /* SummaryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCellViewModel.swift; sourceTree = "<group>"; };
+		9C25F00E29764B0300B285E4 /* DecimalUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtil.swift; sourceTree = "<group>"; };
+		9C25F01029764B6900B285E4 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		9C3FDFA6296FCBD20051E11C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C3FDFA9296FD6470051E11C /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		9C3FDFAB296FE2A20051E11C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			children = (
 				9C3FDFA9296FD6470051E11C /* LocalState.swift */,
 				9C3FDFAB296FE2A20051E11C /* Extensions.swift */,
+				9C25F00E29764B0300B285E4 /* DecimalUtil.swift */,
+				9C25F01029764B6900B285E4 /* CurrencyFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB897BA29693C9F0069B800 /* LoginView.swift in Sources */,
+				9C25F01129764B6900B285E4 /* CurrencyFormatter.swift in Sources */,
+				9C25F00F29764B0300B285E4 /* DecimalUtil.swift in Sources */,
 				9C3FDFAC296FE2A20051E11C /* Extensions.swift in Sources */,
 				9CB897A8296894FE0069B800 /* LoginViewController.swift in Sources */,
 				9CA51A0B296C452000B72BA9 /* OnboardingViewController.swift in Sources */,

@@ -39,7 +39,7 @@ class SummaryCell: UITableViewCell {
     }()
     lazy var balanceAmountLabel: UILabel = {
         let label = UILabel()
-        label.attributedText = makeFormattedBalance(dollars: "435298", cents: "45")
+        label.attributedText = makeFormattedBalance(dollars: "XXX,XXX", cents: "XX")
         label.textAlignment = .right
         label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
@@ -70,6 +70,7 @@ class SummaryCell: UITableViewCell {
     func configure(with viewModel: SummaryCellViewModel) {
         nameLabel.text = viewModel.accountName
         typeLabel.text = viewModel.accountType.rawValue
+        balanceAmountLabel.attributedText = viewModel.balanceAsAttributedString
         
         switch viewModel.accountType {
         case .Banking:

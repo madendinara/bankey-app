@@ -17,5 +17,8 @@ struct SummaryCellViewModel {
     let accountName: String
     let balance: Decimal
     
-//    var balanceAttributedText: AttributedString { return }
+    var balanceAsAttributedString: NSAttributedString {
+        return CurrencyFormatter().makeAttributedCurrency(balance)
+    }
+    
 }
