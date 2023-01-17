@@ -26,6 +26,7 @@ extension SummaryViewController {
     
     
     private func configure() {
+        tableView.backgroundColor = .systemTeal
         tableView.delegate = self
         tableView.dataSource = self
         
