@@ -32,11 +32,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-
+    
+    private func displayLogin() {
+        setRootViewController(loginViewController)
+    }
+    
+    private func displayNextScreen() {
+        if LocalState.hasOnboarded {
+            prepMainView()
+            setRootViewController(mainViewController)
+        } else {
+            setRootViewController(onboardingContainerViewController)
+        }
+    }
+    
+    private func prepMainView() {
+        mainViewController.setStatusBar()
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = .systemTeal
+    }
 }
 
 extension AppDelegate {
-    func setViewController(_ vc: UIViewController, animated: Bool = true) {
+    func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
         guard animated, let window = self.window else {
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
@@ -51,18 +69,14 @@ extension AppDelegate {
 
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
-        if LocalState.hasOnboarded {
-            setViewController(mainViewController)
-        } else {
-            setViewController(onboardingContainerViewController)
-
-        }
+        displayNextScreen()
     }
 }
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
-        setViewController(mainViewController)
+        setRootViewController(mainViewController)
+        prepMainView()
         LocalState.hasOnboarded = true
     }
     
@@ -70,7 +84,7 @@ extension AppDelegate: OnboardingContainerViewControllerDelegate {
 
 extension AppDelegate: LogoutDelegate {
     func didSignOut() {
-        setViewController(loginViewController)
+        setRootViewController(loginViewController)
     }
     
 }
