@@ -13,17 +13,30 @@ class SummaryViewController: UIViewController {
     
     var accounts: [SummaryCellViewModel] = []
     var tableView = UITableView()
-    
+    lazy var logoutBarButton: UIBarButtonItem = {
+        let barButton = UIBarButtonItem(title: "Log out", style: .plain, target: self, action: #selector(tappedLogOut))
+        barButton.tintColor = .label
+        return barButton
+    }()
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        configureNavigationBar()
+    }
+    
+    // MARK: - Methods
+    @objc func tappedLogOut() {
+        NotificationCenter.default.post(name: .logout, object: nil)
+    }
+    
+    func configureNavigationBar() {
+        navigationItem.rightBarButtonItem = logoutBarButton
     }
 }
 
 extension SummaryViewController {
-    
     
     private func configure() {
         tableView.backgroundColor = .systemTeal

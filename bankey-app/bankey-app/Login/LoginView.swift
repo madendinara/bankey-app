@@ -59,6 +59,8 @@ class LoginView: UIView {
         layer.cornerRadius = 5
         clipsToBounds = true
         [stackView].forEach { addSubview($0) }
+        
+        passwordTextField.enablePasswordToggle()
         makeConstaints()
     }
     

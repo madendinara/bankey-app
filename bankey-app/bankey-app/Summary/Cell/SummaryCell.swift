@@ -28,12 +28,14 @@ class SummaryCell: UITableViewCell {
         let label = UILabel()
         label.text = "No Fee"
         label.font = UIFont.preferredFont(forTextStyle: .body)
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     lazy var balanceLabel: UILabel = {
         let label = UILabel()
         label.text = "Some Balance"
         label.textAlignment = .right
+        label.adjustsFontSizeToFitWidth = true
         label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
     }()
